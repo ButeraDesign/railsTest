@@ -1,0 +1,22 @@
+<br>
+<div class = "container">
+  <div class = "row">
+    <div class="col-md-9">
+    </div>
+    <div class="col-md-3">
+      <form class="table well" action="/sessions/<%=(session[:user_id])%>" method='post'>
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+        <input type="hidden" name="_method" value="delete">
+        <input type='submit' value='Logoff' />
+      </form>
+    </div>
+  </div>
+
+  <div class = "row">
+
+    <div class="col-md-9">
+        <h2>User: <%= @user.first_name %> Has Logged In</h2>
+    </div>
+  </div>
+
+</div> <!-- end container ->
